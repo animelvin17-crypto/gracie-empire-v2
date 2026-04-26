@@ -10,7 +10,7 @@ document.addEventListener("keydown", function(e) {
   if (secret.includes("admin")) {
     let pass = prompt("Enter admin password:");
 
-    if (pass === "1234") { // change this
+    if (pass === "1009") { // change this
       isAdmin = true;
       document.getElementById("toggleBtn").style.display = "block";
       alert("Admin unlocked");
