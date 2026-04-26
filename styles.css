@@ -374,3 +374,6 @@ header a:hover {
   cursor: pointer;
   display: inline-block;
 }
+.header {
+  cursor: pointer;
+}

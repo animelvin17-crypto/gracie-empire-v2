@@ -1,8 +1,11 @@
-let isOpen = true;
-let isAdmin = false;
 let clickCount = 0;
+let isAdmin = false;
 
-function logoClick() {
+function headerClick(event) {
+
+  // 🚫 IGNORE clicks on links
+  if (event.target.tagName === "A") return;
+
   clickCount++;
 
   if (clickCount >= 5) {
@@ -24,7 +27,6 @@ function logoClick() {
     clickCount = 0;
   }
 }
-
 function toggleStatus() {
   if (!isAdmin) return;
 
