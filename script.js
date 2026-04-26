@@ -37,3 +37,26 @@ function order(item) {
 
   window.open(url, "_blank");
 }
+let isAdmin = false;
+
+/* SECRET KEY COMBO: press "g" */
+document.addEventListener("keydown", function(e) {
+  if (e.key === "g") {
+    let pass = prompt("Enter admin password:");
+
+    if (pass === "1234") { // 🔥 change this
+      isAdmin = true;
+
+      document.getElementById("toggleBtn").style.display = "inline-block";
+
+      alert("Admin unlocked 😎");
+    } else {
+      alert("Wrong password");
+    }
+  }
+});
+function toggleStatus() {
+  if (!isAdmin) return; // 🔐 BLOCK NON-ADMIN
+
+  // your existing toggle code below
+}
