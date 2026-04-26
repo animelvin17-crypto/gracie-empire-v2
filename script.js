@@ -29,7 +29,7 @@ function toggleStatus() {
 function order(item) {
   if (!isOpen) return;
 
-  let phone = "447460978442"; // PUT YOUR NUMBER
+  let phone = "447831724029"; // PUT YOUR NUMBER
 
   let message = "Hello, I want to order " + item;
 
