@@ -3,12 +3,12 @@ let isAdmin = false;
 
 function headerClick(event) {
 
-  // 🚫 IGNORE clicks on links
   if (event.target.tagName === "A") return;
 
   clickCount++;
+  console.log("click:", clickCount);
 
-  if (clickCount >= 5) {
+  if (clickCount >= 2) {
     let pass = prompt("Enter admin password:");
 
     if (pass === "1009") {
@@ -20,12 +20,11 @@ function headerClick(event) {
       }
 
       alert("Admin unlocked");
-    } else {
-      alert("Wrong password");
     }
 
     clickCount = 0;
   }
+}
 }
 function toggleStatus() {
   if (!isAdmin) return;
