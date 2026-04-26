@@ -1,16 +1,12 @@
-let isOpen = true;
-let isAdmin = false;
+let clickCount = 0;
 
-/* STEALTH ADMIN (type "admin") */
-let secret = "";
+function logoClick() {
+  clickCount++;
 
-document.addEventListener("keydown", function(e) {
-  secret += e.key.toLowerCase();
-
-  if (secret.includes("admin")) {
+  if (clickCount === 3) {  // click 3 times
     let pass = prompt("Enter admin password:");
 
-    if (pass === "1009") { // change this
+    if (pass === "1009") {
       isAdmin = true;
       document.getElementById("toggleBtn").style.display = "block";
       alert("Admin unlocked");
@@ -18,9 +14,10 @@ document.addEventListener("keydown", function(e) {
       alert("Wrong password");
     }
 
-    secret = ""; // reset
+    clickCount = 0; // reset
   }
-});
+}
+));
 
 /* TOGGLE OPEN/CLOSED */
 function toggleStatus() {
