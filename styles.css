@@ -367,3 +367,6 @@ header a:hover {
     font-size: 1.1rem;
   }
 }
+.logo {
+  border: 2px solid red;
+}

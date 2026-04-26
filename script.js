@@ -1,27 +1,32 @@
+let isOpen = true;
+let isAdmin = false;
 let clickCount = 0;
 
 function logoClick() {
   clickCount++;
 
-  if (clickCount === 3) {  // click 3 times
+  if (clickCount >= 5) {
     let pass = prompt("Enter admin password:");
 
     if (pass === "1009") {
       isAdmin = true;
-      document.getElementById("toggleBtn").style.display = "block";
+
+      let toggle = document.getElementById("toggleBtn");
+      if (toggle) {
+        toggle.style.display = "block";
+      }
+
       alert("Admin unlocked");
     } else {
       alert("Wrong password");
     }
 
-    clickCount = 0; // reset
+    clickCount = 0;
   }
 }
-));
 
-/* TOGGLE OPEN/CLOSED */
 function toggleStatus() {
-  if (!isAdmin) return; // block non-admin
+  if (!isAdmin) return;
 
   isOpen = !isOpen;
 
@@ -30,17 +35,12 @@ function toggleStatus() {
 
   if (isOpen) {
     status.innerText = "We are OPEN";
-    status.style.color = "lightgreen";
-
     buttons.forEach(btn => {
       btn.innerText = "Order";
       btn.disabled = false;
     });
-
   } else {
     status.innerText = "We are CLOSED";
-    status.style.color = "red";
-
     buttons.forEach(btn => {
       btn.innerText = "Closed";
       btn.disabled = true;
