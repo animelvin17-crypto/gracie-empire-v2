@@ -370,3 +370,7 @@ header a:hover {
 .logo {
   border: 2px solid red;
 }
+.logo-box {
+  cursor: pointer;
+  display: inline-block;
+}

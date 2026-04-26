@@ -60,3 +60,20 @@ function order(item) {
 
   window.open(url, "_blank");
 }
+function logoClick() {
+  alert("logo clicked"); // TEST
+
+  clickCount++;
+
+  if (clickCount >= 5) {
+    let pass = prompt("Enter admin password:");
+
+    if (pass === "1009") {
+      isAdmin = true;
+      document.getElementById("toggleBtn").style.display = "block";
+      alert("Admin unlocked");
+    }
+
+    clickCount = 0;
+  }
+}
