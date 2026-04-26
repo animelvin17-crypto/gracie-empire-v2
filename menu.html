@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu - Gracie Empire</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<div class="smoke"></div>
+<body>
+<script src="script.js"></script>
+
+<header>
+  <h1>Gracie Empire</h1>
+  <a href="index.html">Home</a>
+</header>
+
+<section class="menu">
+
+  <h2>Our Menu</h2>
+
+  <p id="statusText">We are OPEN</p>
+  <button onclick="toggleStatus()">Toggle</button>
+
+  <div class="item">
+    <img src="image/chickenwings.jpg">
+    <h3>Spicy Chicken Wings</h3>
+    <p>£20.00</p>
+    <button class="order-btn" onclick="order('Spicy Chicken Wings')">Order</button>
+  </div>
+
+  <div class="item">
+    <img src="image/puffpuff.jpg">
+    <h3>Puff Puff</h3>
+    <p>£10.00</p>
+    <button class="order-btn" onclick="order('Puff Puff')">Order</button>
+  </div>
+
+  <div class="item">
+    <img src="image/meatkebab.jpg">
+    <h3>Meat Kebabs</h3>
+    <p>£20.00</p>
+    <button class="order-btn" onclick="order('Meat Kebabs')">Order</button>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
