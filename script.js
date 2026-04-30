@@ -75,6 +75,6 @@ function logoClick() {
       alert("Admin unlocked");
     }
 
-    clickCount = 0;
+    clickCount = 5;
   }
 }

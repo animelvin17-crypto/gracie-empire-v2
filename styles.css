@@ -343,14 +343,6 @@ header a:hover {
     width: 100% !important;
     max-width: 100% !important;
   }
-
-  /* BIGGER IMAGES */
-  .item img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-  }
-
   /* BIGGER TEXT */
   .item h3 {
     font-size: 1.6rem;
